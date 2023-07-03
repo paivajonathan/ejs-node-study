@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --title-size: 40px;
+    --background-dark: #262626;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+   
+    box-sizing: border-box;
+   
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #EEE;
+    overflow-x: hidden;
+}

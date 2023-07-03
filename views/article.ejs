@@ -1,0 +1,15 @@
+<%- include("./partials/header.ejs"); %>
+
+    <link rel="stylesheet" type="text/css" href="/css/article.css" />
+
+    <%- include("./partials/navbar.ejs"); %>
+
+    <main>
+        <div id="article-image" style="background-image: url('/files/<%= article.imageName %>')"></div>
+        <h1 id="article-title"><%= article.title %></h1>
+        <div id="article-content">
+            <%- article.content %>
+        </div>
+    </main>
+
+<%- include("./partials/footer.ejs"); %>

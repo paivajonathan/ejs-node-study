@@ -1,0 +1,151 @@
+main {
+    margin: 1rem 0.25rem;
+}
+
+#div-form {
+    width: 750px;
+    max-width: 100%;
+
+    margin: 1rem auto;
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    #div-form {
+        padding: 0.75rem;
+    }
+}
+
+#title {
+    margin: 1rem 0;
+    
+    text-align: center;
+    font-size: 40px;
+}
+
+.input-container {
+    margin: 0.25rem 0;
+    border-bottom: 1px solid black;
+    padding: 0.125rem;
+    
+    position: relative;
+}
+
+.input-container:focus-within {
+    border-bottom: 1px solid rgb(21, 74, 189);
+}
+
+input {
+    width: 100%;
+    
+    border: none;
+    
+    position: relative;
+    z-index: 2;
+    
+    background-color: transparent;
+    
+    font-size: 25px;
+    
+    outline: none;
+}
+
+.floating-placeholder {
+    position: absolute;
+    bottom: 15px;
+    z-index: 1;
+
+    display: block;
+    
+    color: gray;
+
+    font-size: 15px;
+    text-transform: uppercase;
+    
+    transition: bottom 200ms;
+}
+
+input:active ~ .floating-placeholder,
+input:focus ~ .floating-placeholder,
+input:not(:placeholder-shown) ~ .floating-placeholder {
+    bottom: 35px;
+}
+
+input:active, input:focus {
+    outline: none;
+}
+
+select {
+    width: 100%;
+    
+    border: none;
+        
+    background-color: transparent;
+    
+    font-size: 25px;
+}
+
+select:focus {
+    outline: none;
+}
+
+label {
+    position: absolute;
+    bottom: 35px;
+
+    margin: none;
+    
+    display: block;
+    
+    color: gray;
+    
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#div-buttons {
+    margin: 2.5rem 0;
+    
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+button {
+    width: 300px;
+    max-width: 100%;
+    
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    
+    color: white;
+    
+    font-size: 20px;
+    font-weight: bolder;
+    
+    cursor: pointer;
+}
+
+#btn-reset {
+    background-color: gray;
+}
+
+#btn-submit {
+    background-image: var(--blue-gradient);
+    background-size: 150% 100%;
+    transition: background-position .4s ease-in-out;
+}
+
+#btn-submit:hover {
+    background-position: 100% 0;
+}

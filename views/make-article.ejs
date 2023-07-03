@@ -1,0 +1,24 @@
+<%- include("./partials/header.ejs"); %>
+    <link rel="stylesheet" type="text/css" href="/css/make-article.css" />
+
+    <%- include("./partials/navbar.ejs"); %>
+
+    <main>
+      <form action="/save-article" onsubmit="return validateForm()" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <div id="div-form">
+          <input type="text" name="title" id="article-title" placeholder="Digite o título de seu artigo." required />
+          <input type="text" name="description" placeholder="Descreva brevemente o seu artigo (Mínimo 50 caracteres)." required />
+          <textarea name="content" placeholder="Escreva seu artigo aqui!"></textarea>
+          <div id="div-form-file">
+            <label for="hidden-file-input">Clique aqui!!!!!</label>
+            <input type="file" name="image" id="hidden-file-input" style="display: none" required />
+          </div>
+          <div id="div-form-buttons">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <%- include("./partials/tinyMCE-imports.ejs"); %>
+<%- include("./partials/footer.ejs"); %>
